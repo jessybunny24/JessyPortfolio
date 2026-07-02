@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jessica Galang</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Ingrid+Darling&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav class="nav">
+  <a href="index.html" class="nav-logo">Jessica Galang</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">ABOUT ME</a></li>
+    <li><a href="myworks.html">MY WORKS</a></li>
+    <li><a href="services.html">SERVICES</a></li>
+    <li><a href="index.html#contact">CONTACT ME</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()">...</button>
+</nav>
+
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+
+      <svg
+        id="icon-open"
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2">
+
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+
+      </svg>
+
+      <svg
+        id="icon-close"
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+        style="display:none">
+
+        <line x1="4" y1="4" x2="20" y2="20"/>
+        <line x1="20" y1="4" x2="4" y2="20"/>
+
+      </svg>
+
+    </button>
+
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+
+    <button onclick="scrollToSection('about')">
+      ABOUT ME
+    </button>
+
+    <a href="myworks.html">
+      MY WORKS
+    </a>
+
+    <a href="services.html">
+      SERVICES
+    </a>
+
+    <button onclick="scrollToSection('contact')">
+      CONTACT ME
+    </button>
+
+  </div>
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <img
+      class="hero-img"
+      src="assets/images/my-picture.jpg"
+      alt="Jessica Galang" />
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-card">
+      <p class="hero-card-name">Jessica Galang</p>
+      <p class="hero-card-handle">@carebeaarsss</p>
+    </div>
+
+  </section>
+
+  <!-- ================= BRANDS ================= -->
+
+  <section class="brands-section">
+
+    <div class="marquee-row">
+      <div class="marquee-track go-right" id="upper-track"></div>
+    </div>
+
+    <div class="marquee-row">
+      <div class="marquee-track go-left" id="lower-track"></div>
+    </div>
+
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+
+  <section class="about-section" id="about">
+
+    <img
+      class="about-photo"
+      src="assets/images/about-photo.jpg"
+      alt="Jessica" />
+
+    <div class="about-text">
+
+      <h1 class="about-title">
+        Hi! I'm Jessica
+      </h1>
+
+      <div class="about-body">
+
+        <p>
+          A content creator who loves sharing beauty, skincare, and lifestyle content on Instagram and TikTok. I create honest product reviews, GRWM videos, product testing, and makeup and skincare content that is both authentic and engaging.
+        </p>
+
+        <p>
+          I started my content creation journey in January 2026, and what began as a hobby quickly became something I'm truly passionate about. I enjoy creating high-quality content, connecting with my audience, and collaborating with brands to share products I genuinely love.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= BANNER ================= -->
+
+  <div class="middle-banner"></div>
+
+  <!-- ================= CONTACT ================= -->
+
+  <section class="contact-section" id="contact">
+
+    <h2 class="contact-title">
+      Contact Me
+    </h2>
+
+    <div class="contact-grid">
+
+      <!-- QR -->
+
+      <a
+        href="https://www.tiktok.com/@carebeaarsss"
+        target="_blank"
+        class="contact-col left">
+
+        <div class="qr-wrap">
+          <img
+            src="assets/images/qr.png"
+            alt="TikTok QR Code">
+        </div>
+
+        <p class="qr-caption">
+          Scan to be directed to my TikTok account
+        </p>
+
+      </a>
+
+      <!-- CENTER -->
+
+      <div class="contact-col mid">
+
+        <a
+          href="tel:09687452109"
+          class="contact-row">
+
+          <img
+            class="contact-icon"
+            src="assets/images/phonelogo.png"
+            alt="Phone">
+
+          <span class="contact-text">
+            09687452109
+          </span>
+
+        </a>
+
+        <a
+          href="https://www.facebook.com/jessybunny/"
+          target="_blank"
+          class="contact-row">
+
+          <img
+            class="contact-icon"
+            src="assets/images/facebooklogo.png"
+            alt="Facebook">
+
+          <span class="contact-text">
+            Jessy
+          </span>
+
+        </a>
+
+      </div>
+
+      <!-- RIGHT -->
+
+      <div class="contact-col right">
+
+        <a
+          href="mailto:galangjessica30@gmail.com"
+          class="contact-row">
+
+          <img
+            class="contact-icon"
+            src="assets/images/emaillogo.png"
+            alt="Email">
+
+          <span class="contact-text">
+            galangjessica30@gmail.com
+          </span>
+
+        </a>
+
+        <a
+          href="https://www.instagram.com/care.beaarsss"
+          target="_blank"
+          class="contact-row">
+
+          <img
+            class="contact-icon"
+            src="assets/images/instagramlogo.png"
+            alt="Instagram">
+
+          <span class="contact-text">
+            @care.beaarsss
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <div class="divider"></div>
+
+  <footer class="footer">
+
+    <p class="footer-text">
+      Beauty ✯ Skincare ✯ Get Ready With Me ✯ Make-up Review ✯ Fashion ✯ Faceless Video
+    </p>
+
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

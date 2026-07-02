@@ -1,0 +1,380 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: #fff2db;
+  font-family: 'Hina Mincho', serif;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+img { display: block; 
+  max-width: 100%; 
+}
+a   { text-decoration: none; 
+  color: inherit; 
+}
+button { cursor: pointer; 
+  background: none; 
+  border: none; 
+  font: inherit; 
+}
+
+:root {
+  --plum:  #4e1a36;
+  --cream: #fff2db;
+}
+
+/* ── NAV ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--plum);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.25);
+}
+.nav-logo {
+  font-family: 'Ingrid Darling', cursive;
+  font-size: 2.2rem;
+  color: #fff;
+  flex: 1;
+  line-height: 1;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+.nav-links a,
+.nav-links button {
+  font-family: 'Hina Mincho', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: #fff;
+  transition: color .2s;
+}
+.nav-links a:hover,
+.nav-links button:hover { color: #f5c6d0; }
+
+.hamburger { display: none; color: #fff; padding: 4px; }
+.hamburger svg { display: block; }
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(78,26,54,.96);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a,
+.mobile-menu button {
+  font-family: 'Hina Mincho', serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  color: #fff;
+}
+
+/* ---- MAIN ---- */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 48px 80px;
+}
+
+/* ---- TITLE ---- */
+.page-title {
+  font-family: 'Ingrid Darling', cursive;
+  font-size: clamp(72px, 11vw, 148px);
+  color: #4e1a36;
+  text-align: center;
+  line-height: 1;
+  padding: 24px 0 40px;
+}
+
+/* ---- TOGGLE ---- */
+.toggle-wrap {
+  margin-bottom: 64px;
+}
+
+.toggle-bar {
+  position: relative;
+  background-color: #4e1a36;
+  border-radius: 60px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  height: calc(100% - 16px);
+  width: 0;
+  background-color: #a12d6b;
+  border-radius: 50px;
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.toggle-tab {
+  font-family: 'Hina Mincho', serif;
+  font-size: 17px;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 36px;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.toggle-tab:hover:not(.active) { color: rgba(255, 255, 255, 0.65); }
+
+/* ---- PHONES GRID ---- */
+.phones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  column-gap: 72px;
+  row-gap: 60px;
+  justify-content: center;
+}
+
+/* ---- PHONE BODY ---- */
+.phone-body {
+  width: 250px;
+  background: linear-gradient(155deg, #ccd9e3 0%, #b0c5d6 48%, #bccedb 100%);
+  border-radius: 44px;
+  padding: 13px;
+  position: relative;
+  box-shadow:
+    0 0 0 1px rgba(90, 140, 175, 0.45),
+    0 30px 70px rgba(78, 26, 54, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Volume buttons (left side) */
+.phone-body::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 86px;
+  width: 4px;
+  height: 24px;
+  background: #9ab6c8;
+  border-radius: 3px 0 0 3px;
+  /* second volume button 40px below */
+  box-shadow: 0 40px 0 0 #9ab6c8;
+}
+
+/* Power button (right side) */
+.phone-body::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 110px;
+  width: 4px;
+  height: 52px;
+  background: #9ab6c8;
+  border-radius: 0 3px 3px 0;
+}
+
+/* ---- PHONE SCREEN ---- */
+.phone-screen {
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  background: #080808;
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+}
+
+.phone-island {
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 74px;
+  height: 23px;
+  background: #080808;
+  border-radius: 18px;
+  z-index: 10;
+}
+
+.phone-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.phone-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 1;
+  background: #080808;
+}
+
+/* ---- PLACEHOLDER (shown when no video URL) ---- */
+.phone-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #2a0d1e 0%, #4e1a36 55%, #7a2252 100%);
+  color: rgba(255, 255, 255, 0.7);
+  gap: 10px;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+.phone-placeholder.hidden {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ph-icon {
+  font-size: 28px;
+  opacity: 0.45;
+  line-height: 1;
+}
+
+.ph-cat {
+  font-family: 'Ingrid Darling', cursive;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.02em;
+}
+
+.ph-label {
+  font-family: 'Hina Mincho', serif;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
+/* ---- FOOTER ---- */
+.footer {
+  background-color: #4e1a36;
+  min-height: 93px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 48px;
+  flex-shrink: 0;
+}
+
+.footer-text {
+  font-family: 'Ingrid Darling', cursive;
+  font-size: clamp(18px, 2.8vw, 36px);
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* ───────────── RESPONSIVE ───────────── */
+
+@media (max-width:1000px){
+
+.phones-grid{
+    grid-template-columns:repeat(2,220px);
+    gap:40px;
+}
+
+.phone-body{
+    width:220px;
+}
+
+}
+
+@media (max-width:768px){
+
+.nav{
+    padding:0 20px;
+}
+
+.nav-logo{
+    font-size:1.7rem;
+}
+
+.nav-links{
+    display:none;
+}
+
+.hamburger{
+    display:block;
+}
+
+.main{
+    padding:0 20px 60px;
+}
+
+.page-title{
+    padding:20px 0 30px;
+}
+
+.toggle-wrap{
+    width:100%;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+.toggle-wrap::-webkit-scrollbar{
+    display:none;
+}
+
+.toggle-bar{
+    width:max-content;
+}
+
+}
+
+@media (max-width:560px){
+
+.phones-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.phone-body{
+    width:220px;
+}
+
+.toggle-tab{
+    padding:8px 20px;
+    font-size:13px;
+}
+
+.footer{
+    padding:20px;
+}
+
+.footer-text{
+    font-size:1.2rem;
+}
+
+}

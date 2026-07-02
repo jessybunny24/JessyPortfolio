@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Services | Jessica Galang</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Ingrid+Darling&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/services.css">
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="nav">
+
+    <a href="index.html" class="nav-logo">
+        Jessica Galang
+    </a>
+
+    <ul class="nav-links">
+        <li><a href="index.html#about">ABOUT ME</a></li>
+        <li><a href="myworks.html">MY WORKS</a></li>
+        <li><a class="nav-active" href="services.html">SERVICES</a></li>
+        <li><a href="index.html#contact">CONTACT ME</a></li>
+    </ul>
+
+    <button
+        class="hamburger"
+        onclick="toggleMenu()"
+        aria-label="Open menu">
+
+        <svg
+            id="icon-open"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2">
+
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+
+        </svg>
+
+        <svg
+            id="icon-close"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            style="display:none">
+
+            <line x1="4" y1="4" x2="20" y2="20"/>
+            <line x1="20" y1="4" x2="4" y2="20"/>
+
+        </svg>
+
+    </button>
+
+</nav>
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="index.html#about" onclick="closeMenu()">
+        ABOUT ME
+    </a>
+
+    <a href="myworks.html" onclick="closeMenu()">
+        MY WORKS
+    </a>
+
+    <a href="services.html" onclick="closeMenu()">
+        SERVICES
+    </a>
+
+    <a href="index.html#contact" onclick="closeMenu()">
+        CONTACT ME
+    </a>
+
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<section class="services-section">
+
+    <h1 class="page-title">
+        My Services
+    </h1>
+
+    <div class="services-content">
+
+        <!-- LEFT -->
+
+        <div class="services-image">
+
+            <img
+                src="assets/images/account.jpg"
+                alt="Jessica Instagram Profile">
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="services-text">
+
+            <p>
+                Visual storytelling for the digital age. I craft
+                high-impact content that stops the scroll and starts
+                conversations.
+            </p>
+
+            <p>
+                Whether you need a fresh aesthetic, a viral strategy,
+                or cohesive branding, I help your business stand out
+                in a crowded feed.
+            </p>
+
+            <p class="intro">
+                My core services include:
+            </p>
+
+            <ul>
+
+                <li>
+                    <strong>Product Reviews:</strong>
+                    Honest, compelling insights that help audiences
+                    make informed purchasing decisions.
+                </li>
+
+                <li>
+                    <strong>Product Tutorials:</strong>
+                    Clear and engaging walkthroughs that showcase
+                    your product in real-life use.
+                </li>
+
+                <li>
+                    <strong>GRWM (Get Ready With Me):</strong>
+                    Lifestyle-focused videos that naturally integrate
+                    your brand into daily routines.
+                </li>
+
+                <li>
+                    <strong>Promotional Videos:</strong>
+                    Dynamic content designed to boost engagement,
+                    visibility and conversions.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <p class="footer-text">
+        Beauty ✯ Skincare ✯ Get Ready With Me ✯ Make-up Review ✯ Fashion ✯ Faceless Video
+    </p>
+
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

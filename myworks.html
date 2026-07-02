@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Works — Jessica Galang</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Ingrid+Darling&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/myworks.css" />
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="nav">
+  <span class="nav-logo">Jessica Galang</span>
+
+  <ul class="nav-links">
+    <li><a href="index.html#about">ABOUT ME</a></li>
+    <li><a href="myworks.html">MY WORKS</a></li>
+    <li><a href="services.html">SERVICES</a></li>
+    <li><a href="index.html#contact">CONTACT ME</a></li>
+  </ul>
+
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+
+    <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+
+    <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display:none">
+      <line x1="4" y1="4" x2="20" y2="20"/>
+      <line x1="20" y1="4" x2="4" y2="20"/>
+    </svg>
+
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button onclick="scrollToSection('about')">ABOUT ME</button>
+  <a href="myworks.html">MY WORKS</a>
+  <a href="services.html">SERVICES</a>
+  <button onclick="scrollToSection('contact')">CONTACT ME</button>
+</div>
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+  <h1 class="page-title">My Works</h1>
+
+  <!-- TOGGLE -->
+  <div class="toggle-wrap">
+    <div class="toggle-bar" id="toggleBar">
+      <span class="toggle-slider" id="toggleSlider"></span>
+
+      <button class="toggle-tab active" data-cat="makeup">MAKE UP</button>
+      <button class="toggle-tab" data-cat="skincare">SKINCARE</button>
+      <button class="toggle-tab" data-cat="wellness">WELLNESS</button>
+      <button class="toggle-tab" data-cat="haircare">HAIRCARE</button>
+
+    </div>
+  </div>
+
+  <!-- PHONES -->
+  <div class="phones-grid">
+
+    <!-- PHONE 1 -->
+    <div class="phone-wrap">
+      <div class="phone-body">
+        <div class="phone-screen">
+          <div class="phone-island"></div>
+
+          <div class="phone-content" data-slot="0">
+
+            <video class="phone-video" autoplay muted loop playsinline></video>
+
+            <div class="phone-placeholder">
+              <span class="ph-icon">&#9654;</span>
+              <span class="ph-cat"></span>
+              <span class="ph-label">Video</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHONE 2 -->
+    <div class="phone-wrap">
+      <div class="phone-body">
+        <div class="phone-screen">
+          <div class="phone-island"></div>
+
+          <div class="phone-content" data-slot="1">
+            <video class="phone-video" autoplay muted loop playsinline></video>
+
+            <div class="phone-placeholder">
+              <span class="ph-icon">&#9654;</span>
+              <span class="ph-cat"></span>
+              <span class="ph-label">Video</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PHONE 3 -->
+    <div class="phone-wrap">
+      <div class="phone-body">
+        <div class="phone-screen">
+          <div class="phone-island"></div>
+
+          <div class="phone-content" data-slot="2">
+            <video class="phone-video" autoplay muted loop playsinline></video>
+
+            <div class="phone-placeholder">
+              <span class="ph-icon">&#9654;</span>
+              <span class="ph-cat"></span>
+              <span class="ph-label">Video</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PHONE 4 -->
+    <div class="phone-wrap">
+      <div class="phone-body">
+        <div class="phone-screen">
+          <div class="phone-island"></div>
+
+          <div class="phone-content" data-slot="3">
+            <video class="phone-video" autoplay muted loop playsinline></video>
+
+            <div class="phone-placeholder">
+              <span class="ph-icon">&#9654;</span>
+              <span class="ph-cat"></span>
+              <span class="ph-label">Video</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PHONE 5 -->
+    <div class="phone-wrap">
+      <div class="phone-body">
+        <div class="phone-screen">
+          <div class="phone-island"></div>
+
+          <div class="phone-content" data-slot="4">
+            <video class="phone-video" autoplay muted loop playsinline></video>
+
+            <div class="phone-placeholder">
+              <span class="ph-icon">&#9654;</span>
+              <span class="ph-cat"></span>
+              <span class="ph-label">Video</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- PHONE 6 -->
+    <div class="phone-wrap">
+      <div class="phone-body">
+        <div class="phone-screen">
+          <div class="phone-island"></div>
+
+          <div class="phone-content" data-slot="5">
+            <video class="phone-video" autoplay muted loop playsinline></video>
+
+            <div class="phone-placeholder">
+              <span class="ph-icon">&#9654;</span>
+              <span class="ph-cat"></span>
+              <span class="ph-label">Video</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+  <p class="footer-text">
+    Beauty ✯ Skincare ✯ Get Ready With Me ✯ Make-up Review ✯ Fashion ✯ Faceless Video
+  </p>
+</footer>
+
+<!-- JS -->
+<script src="js/myworks.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: #fff2db;
+  font-family: 'Hina Mincho', serif;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+img { display: block; 
+  max-width: 100%; 
+}
+a   { text-decoration: none; 
+  color: inherit; 
+}
+button { cursor: pointer; 
+  background: none; 
+  border: none; 
+  font: inherit; 
+}
+
+:root {
+  --plum:  #4e1a36;
+  --cream: #fff2db;
+}
+
+/* ── NAV ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--plum);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.25);
+}
+.nav-logo {
+  font-family: 'Ingrid Darling', cursive;
+  font-size: 2.2rem;
+  color: #fff;
+  flex: 1;
+  line-height: 1;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+.nav-links a,
+.nav-links button {
+  font-family: 'Hina Mincho', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: #fff;
+  transition: color .2s;
+}
+.nav-links a:hover,
+.nav-links button:hover { color: #f5c6d0; }
+
+.hamburger { display: none; color: #fff; padding: 4px; }
+.hamburger svg { display: block; }
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(78,26,54,.96);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a,
+.mobile-menu button {
+  font-family: 'Hina Mincho', serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  color: #fff;
+}
+
+/* ================= GENERAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#F8EED5;
+    font-family:"Hina Mincho", serif;
+    color:#3f1a30;
+}
+
+/* ================= SERVICES ================= */
+
+.services-section{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 60px;
+}
+
+.page-title{
+    text-align:center;
+    font-family:"Ingrid Darling", cursive;
+    font-size:90px;
+    color:#5a2142;
+    margin-bottom:35px;
+    font-weight:400;
+}
+
+/* 2 COLUMN LAYOUT */
+
+.services-content{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    gap:55px;
+}
+
+/* LEFT */
+
+.services-image{
+    flex:0 0 380px;
+}
+
+.services-image img{
+    width:100%;
+    display:block;
+    border-radius:4px;
+}
+
+/* RIGHT */
+
+.services-text{
+    flex:1;
+    max-width:650px;
+    font-size:20px;
+    line-height:1.8;
+}
+
+.services-text p{
+    margin-bottom:18px;
+}
+
+.services-text .intro{
+    margin-top:5px;
+    margin-bottom:12px;
+}
+
+.services-text ul{
+    padding-left:28px;
+}
+
+.services-text li{
+    margin-bottom:18px;
+}
+
+.services-text strong{
+    font-weight:bold;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#55203d;
+    color:white;
+    text-align:center;
+    padding:16px;
+    margin-top:45px;
+}
+
+.footer-text{
+    font-family:"Ingrid Darling", cursive;
+    font-size:34px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .services-content{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .services-image{
+        flex:none;
+        width:320px;
+    }
+
+    .services-text{
+        max-width:100%;
+        font-size:18px;
+    }
+
+    .page-title{
+        font-size:65px;
+    }
+
+    .footer-text{
+        font-size:24px;
+    }
+
+}

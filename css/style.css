@@ -1,0 +1,404 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: #fff2db;
+  font-family: 'Hina Mincho', serif;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+img { display: block; 
+  max-width: 100%; 
+}
+a   { text-decoration: none; 
+  color: inherit; 
+}
+button { cursor: pointer; 
+  background: none; 
+  border: none; 
+  font: inherit; 
+}
+
+:root {
+  --plum:  #4e1a36;
+  --cream: #fff2db;
+}
+
+/* ── NAV ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--plum);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.25);
+}
+.nav-logo {
+  font-family: 'Ingrid Darling', cursive;
+  font-size: 2.2rem;
+  color: #fff;
+  flex: 1;
+  line-height: 1;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+.nav-links a,
+.nav-links button {
+  font-family: 'Hina Mincho', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: #fff;
+  transition: color .2s;
+}
+.nav-links a:hover,
+.nav-links button:hover { color: #f5c6d0; }
+
+.hamburger { display: none; color: #fff; padding: 4px; }
+.hamburger svg { display: block; }
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(78,26,54,.96);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a,
+.mobile-menu button {
+  font-family: 'Hina Mincho', serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  color: #fff;
+}
+
+/* ── HERO ── */
+.hero { position: relative; height: 88vh; overflow: hidden; }
+.hero-img { position: absolute; 
+  inset: 0; 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: top center; 
+}
+.hero-overlay { position: absolute; 
+  inset: 0; 
+  background: rgba(0,0,0,.22); 
+}
+.hero-card { position: absolute; 
+  bottom: 36px; 
+  right: 40px; 
+  background: var(--plum); 
+  border-radius: 18px; 
+  padding: 16px 28px; 
+}
+.hero-card-name { font-family: 'Hina Mincho', serif; 
+  color: #fff; 
+  font-size: 1.6rem; 
+  line-height: 1.3; 
+}
+.hero-card-handle { font-family: 'Hina Mincho', serif; 
+  color: rgba(255,255,255,.75); 
+  font-size: 1rem; margin-top: 2px; 
+}
+
+/* ── MARQUEE ── */
+.brands-section { background: var(--cream); 
+  padding: 28px 0; 
+  overflow: hidden; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px; 
+}
+.marquee-row { overflow: hidden; 
+  width: 100%; 
+}
+.marquee-track { display: flex; 
+  gap: 24px; 
+  width: max-content; 
+}
+.marquee-track.go-right { animation: marquee-right 32s linear infinite; 
+}
+.marquee-track.go-left  { animation: marquee-left  32s linear infinite; 
+}
+
+@keyframes marquee-left { 0% { transform: translateX(0); } 100% { transform: translateX(-33.333%); } }
+@keyframes marquee-right { 0% { transform: translateX(-33.333%); } 100% { transform: translateX(0%); } }
+
+.logo-pill {
+  width: 160px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-pill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── ABOUT ── */
+.about-section { padding: 72px 40px; max-width: 1200px; margin: 0 auto; display: flex; align-items: flex-start; gap: 56px; }
+.about-photo { width: 300px; 
+  flex-shrink: 0; border-radius: 28px; object-fit: cover; 
+  aspect-ratio: 3/4; 
+  box-shadow: 0 10px 40px rgba(78,26,54,.18); 
+}
+.about-text { flex: 1; 
+  min-width: 0; 
+}
+.about-title { font-family: 'Ingrid Darling', cursive; 
+  color: var(--plum); font-size: clamp(3rem, 8vw, 7rem); 
+  line-height: 1; margin-bottom: 24px; 
+}
+.about-body { font-family: 'Hina Mincho', serif; 
+  font-size: 1.05rem; line-height: 1.85; 
+  color: #1a1a1a; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 18px; max-width: 640px; 
+}
+/* ── BANNER ── */
+.middle-banner {
+  height: 40px; 
+  background-color: #4e1a36; 
+  margin: 40px 0; 
+  width: 100%;
+}
+
+/* ── CONTACT ICONS  ── */
+.contact-icon {
+  width: 32px;  
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+  margin-bottom: 12px;
+}
+
+/* ── CONTACT ───────────────────────────── */
+
+.contact-section{
+    padding:64px 40px 80px;
+    max-width:1000px;
+    margin:0 auto;
+}
+
+.contact-title{
+    font-family:'Ingrid Darling',cursive;
+    color:var(--plum);
+    font-size:clamp(3.5rem,9vw,6rem);
+    line-height:1;
+    margin-bottom:48px;
+    text-align:center;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    align-items:start;
+}
+
+.contact-col{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+}
+
+.contact-col.mid,
+.contact-col.right{
+    align-items:flex-start;
+}
+
+.qr-wrap{
+    width:160px;
+    height:160px;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,.12);
+}
+
+.qr-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.qr-caption{
+    font-size:.9rem;
+    color:var(--plum);
+    text-align:center;
+    max-width:170px;
+    line-height:1.6;
+}
+
+.contact-row{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    width:100%;
+    margin-bottom:14px;
+}
+
+.contact-icon{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+.contact-text{
+    font-family:'Hina Mincho',serif;
+    color:var(--plum);
+    font-size:1rem;
+    line-height:1.4;
+    overflow-wrap: anywhere;
+}
+
+/* ── FOOTER ── */
+.divider { height: 28px; background: var(--plum); }
+.footer { background: var(--plum); 
+  padding: 20px 20px 28px; 
+  text-align:center; 
+}
+.footer-text { font-family: 'Ingrid Darling', cursive; 
+  color: #fff; font-size: clamp(1.1rem, 3vw, 1.85rem); 
+  line-height: 1.5; 
+}
+
+/* ── RESPONSIVE ───────────────────────────── */
+
+@media (max-width:900px){
+
+.about-section{
+    flex-direction:column;
+    align-items:center;
+    padding:48px 24px;
+    gap:32px;
+}
+
+.about-photo{
+    width:100%;
+    max-width:320px;
+}
+
+.contact-grid{
+    grid-template-columns:1fr;
+    gap:48px;
+}
+
+.contact-col,
+.contact-col.mid,
+.contact-col.right{
+    align-items:center;
+}
+
+.contact-row{
+    justify-content:center;
+    text-align:center;
+}
+
+}
+
+@media (max-width:768px){
+
+.nav{
+    padding:0 20px;
+}
+
+.nav-logo{
+    font-size:1.7rem;
+}
+
+.nav-links{
+    display:none;
+}
+
+.hamburger{
+    display:block;
+}
+
+.hero{
+    height:72vh;
+}
+
+.hero-card{
+    right:16px;
+    bottom:20px;
+    padding:12px 18px;
+}
+
+.contact-section{
+    padding:48px 20px 60px;
+}
+
+.contact-icon{
+    width:52px;
+    height:52px;
+}
+
+.contact-text{
+    font-size:.95rem;
+}
+
+.qr-wrap{
+    width:170px;
+    height:170px;
+}
+
+}
+
+@media (max-width:480px){
+
+.hero{
+    height:60vh;
+}
+
+.about-title{
+    font-size:2.8rem;
+}
+
+.hero-card-name{
+    font-size:1.3rem;
+}
+
+.hero-card-handle{
+    font-size:.9rem;
+}
+
+.contact-title{
+    font-size:3rem;
+}
+
+.contact-text{
+    font-size:.9rem;
+}
+
+.footer-text{
+    font-size:1.2rem;
+}
+
+}
