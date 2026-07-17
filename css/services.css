@@ -96,6 +96,53 @@ body{
     color:#3f1a30;
 }
 
+/* ---- TOGGLE ---- */
+.toggle-wrap {
+  margin-bottom: 64px;
+}
+
+.toggle-bar {
+  position: relative;
+  background-color: #4e1a36;
+  border-radius: 60px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  height: calc(100% - 16px);
+  width: 0;
+  background-color: #a12d6b;
+  border-radius: 50px;
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.toggle-tab {
+  font-family: 'Hina Mincho', serif;
+  font-size: 17px;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 36px;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.toggle-tab:hover:not(.active) { color: rgba(255, 255, 255, 0.65); }
+
 /* ================= SERVICES ================= */
 
 .services-section{
